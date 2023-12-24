@@ -1,0 +1,29 @@
+type: default-flatpaks
+system:
+  repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
+  install:
+    # system
+    - com.github.tchx84.Flatseal
+    - org.kde.okular
+    - org.videolan.VLC
+    # internet
+    - com.brave.Browser # handy for when discord's flatpak stops working
+    - com.vivaldi.Vivaldi
+    - com.discordapp.Discord
+    # office-y stuff
+    # - com.obsproject.Studio
+    - org.gimp.GIMP
+    - md.obsidian.Obsidian
+    - org.libreoffice.LibreOffice
+    - org.onlyoffice.desktopeditors
+    - org.mozilla.Thunderbird
+    # games
+    - com.heroicgameslauncher.hgl
+    - com.valvesoftware.Steam
+    # coding
+    - com.vscodium.codium
+# A flatpak repo can also be added without having to install flatpaks,
+# as long as one of the repo- fields is present
+user:
+  repo-name: flathub
+

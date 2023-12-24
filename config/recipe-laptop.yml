@@ -1,0 +1,21 @@
+# image will be published to ghcr.io/<user>/<name>
+name: crafti-sway-laptop
+# description will be included in the image's metadata
+description: I want to daily drive Sway ~~on a KDE-based system.~~
+
+# the base image to build on top of (FROM) and the version tag to use
+base-image: ghcr.io/ublue-os/sericea-main
+image-version: 39 # latest is also supported if you want new updates ASAP
+
+# module configuration, executed in order
+# you can include multiple instances of the same module
+modules:
+  - from-file: common/01-common-workaround.yml
+  - from-file: common/02-common-apps.yml
+  - from-file: common/03-common-flatpaks.yml
+  - from-file: common/04-common-wex.yml
+  - from-file: common/05-common-other.yml
+  - type: script
+    scripts:
+      # this sets up the proper policy & signing files for signed images to work
+      - signing.sh

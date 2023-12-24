@@ -1,0 +1,10 @@
+type: rpm-ostree
+repos:
+install:
+  - jq
+  - libnotify # should already be installed
+  - wtype # used by wex-runner
+type: script
+scripts:
+  - install-wex.sh
+
