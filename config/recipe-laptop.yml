@@ -1,5 +1,5 @@
 # image will be published to ghcr.io/<user>/<name>
-name: crafti-sway-laptop
+name: crafti-shale-laptop
 # description will be included in the image's metadata
 description: I want to daily drive Sway ~~on a KDE-based system.~~
 
