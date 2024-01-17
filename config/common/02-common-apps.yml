@@ -33,7 +33,6 @@ install:
   - python3-libguestfs
   - virt-top
   - samba # file sharing (virtiofs + WinFSP + cl.exe don't like each other)
-  - steam
 remove:
   - firefox # default firefox removed in favor of brave + vivaldi
   - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
