@@ -4,6 +4,7 @@ scripts:
   - steamworkaround.sh
 
 type: rpm-ostree
+repo:
 install:
   - steam
 
