@@ -1,0 +1,13 @@
+
+type: script
+scripts:
+  - steamworkaround.sh
+
+type: rpm-ostree
+install:
+  - steam
+
+type: script
+scripts:
+  - steamworkaround.sh
+
