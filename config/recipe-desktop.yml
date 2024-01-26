@@ -15,7 +15,7 @@ modules:
   - from-file: common/03-common-flatpaks.yml
   - from-file: common/04-common-wex.yml
   - from-file: common/05-common-other.yml
-  - from-file: common/06-common-other.yml
+  - from-file: common/06-common-steam.yml
   - type: files
     files:
       - usr-etc-sway: /usr/etc/sway
