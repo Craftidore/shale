@@ -2,13 +2,3 @@
 type: script
 scripts:
   - steamworkaround.sh
-
-type: rpm-ostree
-repo:
-install:
-  - steam
-
-type: script
-scripts:
-  - steamworkaround.sh
-
