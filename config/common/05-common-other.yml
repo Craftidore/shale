@@ -22,3 +22,4 @@ install:
 type: files
 files:
   - usr: /usr
+  - usr-share-sway: /usr/share/sway
