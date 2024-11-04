@@ -10,16 +10,12 @@ image-version: 40 # latest is also supported if you want new updates ASAP
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
-  - from-file: ../config/common/01-common-workaround.yml
-  - from-file: ../config/common/02-common-apps.yml
-  - from-file: ../config/common/03-common-flatpaks.yml
-  - from-file: ../config/common/04-common-wex.yml
-  - from-file: ../config/common/05-common-other.yml
-    #- from-file: ../config/common/06-common-steam.yml
+  - type: signing # this sets up the proper policy & signing files for signed images to work fully
+  - from-file: "common/01-common-workaround.yml"
+  - from-file: "common/02-common-apps.yml"
+  - from-file: "common/03-common-flatpaks.yml"
+  - from-file: "common/04-common-wex.yml"
+  - from-file: "common/05-common-other.yml"
   - type: files
     files:
       - usr-etc-sway: /usr/etc/sway
-  # - type: script
-  #   scripts:
-      # this sets up the proper policy & signing files for signed images to work
-  - type: signing # this sets up the proper policy & signing files for signed images to work fully

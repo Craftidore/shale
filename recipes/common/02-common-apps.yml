@@ -1,0 +1,40 @@
+modules:
+  - type: rpm-ostree
+    repos: 
+      - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
+      - https://pkgs.tailscale.com/stable/fedora/%OS_VERSION%/tailscale.repo
+      - https://copr.fedorainfracloud.org/coprs/alternateved/keyd/repo/fedora-%OS_VERSION%/alternateved-keyd-fedora-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/che/nerd-fonts/repo/fedora-%OS_VERSION%/che-nerd-fonts-fedora-%OS_VERSION%.repo
+    install:
+      # terminal quality-of-life
+      - alacritty
+      - micro
+      - vim
+      - starship
+      - wl-clipboard
+      # System
+      - NetworkManager-tui
+      - tailscale
+      - pavucontrol-qt
+      - keyd
+      # sway stuff
+      # - sway # artifact of when this was kde-based
+      - slurp # screenshots
+      - wofi # rofi clone for menus
+      - nerd-fonts
+      # virtualisation
+      - virt-install
+      - qemu-kvm
+      - qemu
+      - libvirt-daemon-config-network
+      - libvirt-daemon-kvm
+      - virt-manager
+      - virt-viewer
+      - libguestfs-tools
+      - python3-libguestfs
+      - virt-top
+      - samba # file sharing (virtiofs + WinFSP + cl.exe don't like each other)
+    remove:
+      - firefox # default firefox removed in favor of brave + vivaldi
+      - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
+
