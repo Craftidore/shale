@@ -15,8 +15,8 @@ modules:
   - from-file: ../config/common/03-common-flatpaks.yml
   - from-file: ../config/common/04-common-wex.yml
   - from-file: ../config/common/05-common-other.yml
-  - type: script
-    scripts:
+  # - type: script
+  #   scripts:
       # this sets up the proper policy & signing files for signed images to work
       # - signing.sh
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
