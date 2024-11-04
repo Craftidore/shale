@@ -1,4 +1,5 @@
 type: default-flatpaks
+notify: true # Send notification after install/uninstall is finished (true/false)
 system:
   repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
   install:

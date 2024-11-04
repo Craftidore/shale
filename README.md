@@ -1,5 +1,9 @@
 # shale
 
+Midway through migration to BlueBuild.
+
+## Ignore Everything Down Here:
+
 > **Warning**
 > Startingpoint was recently rewritten, and this version is considered a "1.0" *semi-*stable release.
 > There are breaking changes between this and the previous version.
