@@ -4,7 +4,7 @@ name: crafti-shale-laptop
 description: I want to daily drive Sway ~~on a KDE-based system.~~
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/sericea-main
+base-image: ghcr.io/ublue-os/sway-atomic-main
 image-version: 42 # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
