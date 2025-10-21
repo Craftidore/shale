@@ -11,11 +11,11 @@ image-version: 42 # latest is also supported if you want new updates ASAP
 # you can include multiple instances of the same module
 modules:
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
-  - from-file: "common/01-common-workaround.yml"
   - from-file: "common/02-common-apps.yml"
   - from-file: "common/03-common-flatpaks.yml"
   - from-file: "common/04-common-wex.yml"
   - from-file: "common/05-common-other.yml"
   - type: files
     files:
-      - usr-etc-sway: /usr/etc/sway
+      - source: system/usr-etc-sway
+        destination: /usr/etc/sway

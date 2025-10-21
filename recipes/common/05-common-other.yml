@@ -6,5 +6,7 @@ modules:
 
   - type: files
     files:
-      - usr: /usr
-      - usr-share-sway: /usr/share/sway
+      - source: system/usr
+        destination: /usr
+      - source: system/usr-share-sway
+        destination: /usr/share/sway

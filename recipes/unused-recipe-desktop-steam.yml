@@ -10,7 +10,6 @@ image-version: 42 # latest is also supported if you want new updates ASAP
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
-  - from-file: ../config/common/01-common-workaround.yml
   - from-file: ../config/common/02-common-apps.yml
   - from-file: ../config/common/03-common-flatpaks.yml
   - from-file: ../config/common/04-common-wex.yml

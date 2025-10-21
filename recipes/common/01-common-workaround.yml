@@ -1,9 +1,0 @@
-modules:
-  - type: rpm-ostree
-    install:
-      - binutils
-
-  - type: script
-    scripts:
-      # this works around an rpm-ostree error w/VirtualBox
-      - workarounds.sh
