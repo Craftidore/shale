@@ -3,7 +3,7 @@ name: crafti-shale-laptop
 # description will be included in the image's metadata
 description: I want to daily drive Sway ~~on a KDE-based system.~~
 
-base-image: ghcr.io/wayblueorg/sway-nvidia
+base-image: ghcr.io/wayblueorg/sway
 image-version: latest
 
 # module configuration, executed in order
