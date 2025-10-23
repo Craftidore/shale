@@ -33,7 +33,18 @@ ostree-image-signed:docker://ghcr.io/craftidore/craft-ublue-desktop:latest
 
 The `latest` tag will automatically point to the latest build. That build will still always use the Fedora version specified in `recipe.yml`, so you won't get accidentally updated to the next major version.
 
+### Nvidia
 
+According to the waybluorg/wayblue page, if you're using an nvidia image,
+run this after installation.
+
+```bash
+rpm-ostree kargs \
+    --append-if-missing=rd.driver.blacklist=nouveau \
+    --append-if-missing=modprobe.blacklist=nouveau \
+    --append-if-missing=nvidia-drm.modeset=1 \
+    --append-if-missing=nvidia-drm.fbdev=1
+```
 
 ## ISO
 
