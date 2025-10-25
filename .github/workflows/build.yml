@@ -3,7 +3,7 @@ on:
   schedule:
     - cron:
         "00 06 * * *" # build at 06:00 UTC every day
-        # (20 minutes after last ublue images start building)
+        # (1 hour after last wayblue images start building)
   push:
     paths-ignore: # don't rebuild if only documentation has changed
       - "**.md"
@@ -29,6 +29,7 @@ jobs:
           # !! Add your recipes here
           - recipe-desktop.yml
           - recipe-laptop.yml     
+          - recipe-hyprland-test-desktop.yml
     steps:
       # the build is fully handled by the reusable github action
       - name: Build Custom Image

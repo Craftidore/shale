@@ -1,0 +1,17 @@
+# image will be published to ghcr.io/<user>/<name>
+name: crafti-shale-hyprland-experimental
+# description will be included in the image's metadata
+description: I want to daily drive Sway ~~on a KDE-based system.~~
+
+base-image: ghcr.io/wayblueorg/hyprland-nvidia
+image-version: latest
+
+# module configuration, executed in order
+# you can include multiple instances of the same module
+modules:
+  - type: signing # this sets up the proper policy & signing files for signed images to work fully
+  - from-file: "common/02-common-apps.yml"
+  - from-file: "common/03-common-flatpaks.yml"
+  - from-file: "common/04-common-wex.yml"
+  - from-file: "common/05-common-other.yml"
+
