@@ -8,5 +8,3 @@ modules:
     files:
       - source: system/usr
         destination: /usr
-      - source: system/usr-share-sway
-        destination: /usr/share/sway

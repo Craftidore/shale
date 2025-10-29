@@ -14,3 +14,4 @@ modules:
   - from-file: "common/03-common-flatpaks.yml"
   - from-file: "common/04-common-wex.yml"
   - from-file: "common/05-common-other.yml"
+  - from-file: "common/09-common-sway.yml"

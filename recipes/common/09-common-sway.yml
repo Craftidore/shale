@@ -1,0 +1,5 @@
+modules:
+  - type: files
+    files:
+      - source: system/usr-share-sway
+        destination: /usr/share/sway
