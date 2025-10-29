@@ -1,7 +1,7 @@
 # image will be published to ghcr.io/<user>/<name>
 name: crafti-shale-hyprland-experimental
 # description will be included in the image's metadata
-description: I want to daily drive Sway ~~on a KDE-based system.~~
+description: I want to daily drive Hyprland on an atomic desktop
 
 base-image: ghcr.io/wayblueorg/hyprland-nvidia
 image-version: latest

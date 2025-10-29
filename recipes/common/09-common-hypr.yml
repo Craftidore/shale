@@ -11,3 +11,8 @@ modules:
       - xwaylandvideobridge
     remove:
       - xdg-desktop-portal-hyprland
+  - type: files
+    files:
+      - source: system/hyprland/share
+        destination: /usr/share/hypr/
+    
