@@ -29,7 +29,6 @@ jobs:
           # !! Add your recipes here
           - recipe-desktop.yml
           - recipe-laptop.yml     
-          - recipe-hyprland-test-desktop.yml
     steps:
       # the build is fully handled by the reusable github action
       - name: Build Custom Image

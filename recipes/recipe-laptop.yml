@@ -1,9 +1,9 @@
 # image will be published to ghcr.io/<user>/<name>
 name: crafti-shale-laptop
 # description will be included in the image's metadata
-description: I want to daily drive Sway ~~on a KDE-based system.~~
+description: I want to daily drive Hyprland on Fedora Atomic
 
-base-image: ghcr.io/wayblueorg/sway
+base-image: ghcr.io/wayblueorg/hyprland
 image-version: latest
 
 # module configuration, executed in order
@@ -14,4 +14,4 @@ modules:
   - from-file: "common/03-common-flatpaks.yml"
   - from-file: "common/04-common-wex.yml"
   - from-file: "common/05-common-other.yml"
-  - from-file: "common/09-common-sway.yml"
+  - from-file: "common/09-common-hypr.yml"
