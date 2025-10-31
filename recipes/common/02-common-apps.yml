@@ -34,6 +34,7 @@ modules:
       - qemu
       - libvirt-daemon-config-network
       - libvirt-daemon-kvm
+      - mate-polkit
       - virt-manager
       - virt-viewer
       - libguestfs-tools
