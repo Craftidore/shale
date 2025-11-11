@@ -9,6 +9,7 @@ modules:
     install:
       - xdg-desktop-portal-wlr
       - xwaylandvideobridge
+      - hyprland-qtutils
     remove:
       - xdg-desktop-portal-hyprland
   - type: files
