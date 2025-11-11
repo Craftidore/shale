@@ -4,7 +4,7 @@
 
 Shale: A sway-based Fedora distribution for Craftidore's personal use. Named after a rock because Fedora Atomic distributions used to all be named after rocks.
 
-Based on wayblueorg/wayblue's sway/sway-nvidia ever since ublue's sway-nvidia got deprecated.
+Based on wayblueorg/wayblue's hyprland/hyprland-nvidia ever since ublue's sway-nvidia got deprecated.
 
 ## Installation
 
@@ -14,18 +14,31 @@ Based on wayblueorg/wayblue's sway/sway-nvidia ever since ublue's sway-nvidia go
 To rebase an existing atomic Fedora installation to the latest build:
 
 - First rebase to the unsigned image, to get the proper signing keys and policies installed:
+
   ```
-  rpm-ostree rebase ostree-unverified-registry:ghcr.io/craftidore/craft-shale-desktop:latest
+  # Nvidia Desktop
+  rpm-ostree rebase ostree-unverified-registry:ghcr.io/craftidore/crafti-shale-desktop:latest
+  # Laptop
+  rpm-ostree rebase ostree-unverified-registry:ghcr.io/craftidore/crafti-shale-laptop:latest
   ```
+
 - Reboot to complete the rebase:
+
   ```
   systemctl reboot
   ```
+
 - Then rebase to the signed image, like so:
+
   ```
-  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/craftidore/craft-shale-desktop:latest
+  # Desktop
+  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/craftidore/crafti-shale-desktop:latest
+  # Laptop
+  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/craftidore/crafti-shale-laptop:latest
   ```
+
 - Reboot again to complete the installation
+
   ```
   systemctl reboot
   ```
