@@ -10,6 +10,7 @@ modules:
       - xdg-desktop-portal-wlr
       - xwaylandvideobridge
       - hyprland-qtutils
+      - swaybg
     remove:
       - xdg-desktop-portal-hyprland
   - type: files
