@@ -8,3 +8,5 @@ modules:
     files:
       - source: system/usr
         destination: /usr
+      - source: system/usr/share/pipewire/pipewire.conf.avail/50-raop.conf
+        destination: /usr/share/pipewire/pipewire.conf.avail/50-raop.conf
