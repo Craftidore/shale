@@ -13,15 +13,11 @@ modules:
           # internet
           - com.brave.Browser # handy for when discord's flatpak stops working
           - com.vivaldi.Vivaldi
-          - com.discordapp.Discord
           # office-y stuff
           - org.gimp.GIMP
           - md.obsidian.Obsidian
           - org.libreoffice.LibreOffice
           - org.mozilla.Thunderbird
-          # games
-          - com.heroicgameslauncher.hgl
-          - com.valvesoftware.Steam
           # coding
           - com.vscodium.codium
 
