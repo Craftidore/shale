@@ -26,7 +26,8 @@ modules:
       # - sway # artifact of when this was kde-based
       - slurp # screenshots
       - flameshot # screenshots, alternative
-      - wofi # rofi clone for menus
+      - wofi # rofi clone for menus (No longer used, but might use it in other places)
+      - ulauncher
       - nerd-fonts
       # virtualisation
       - virt-install

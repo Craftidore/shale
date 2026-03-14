@@ -18,5 +18,7 @@ modules:
   - from-file: "common/10-common-greetd.yml"
   - type: dnf
     install:
+      install-weak-deps: false
+      allow-erasing: true
       packages:
         - steam
