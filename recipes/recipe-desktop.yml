@@ -15,4 +15,10 @@ modules:
   - from-file: "common/04-common-wex.yml"
   - from-file: "common/05-common-other.yml"
   - from-file: "common/09-common-hypr.yml"
+  - type: dnf
+    remove:
+      - sddm
+    install:
+      packages:
+        - lightdm
 
