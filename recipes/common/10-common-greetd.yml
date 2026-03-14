@@ -1,0 +1,13 @@
+modules:
+  - type: dnf
+    remove:
+      packages:
+        - sddm
+    install:
+      packages:
+        - greetd
+        - tuigreet
+  - type: files
+    files:
+      - source: system/greetd/
+        destination: /usr/etc/greetd/
