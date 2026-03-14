@@ -16,3 +16,7 @@ modules:
   - from-file: "common/05-common-other.yml"
   - from-file: "common/09-common-hypr.yml"
   - from-file: "common/10-common-greetd.yml"
+  - type: dnf
+    install:
+      packages:
+        - steam
