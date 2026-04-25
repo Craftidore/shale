@@ -12,6 +12,7 @@ modules:
       - xdg-desktop-portal-wlr
       - xwaylandvideobridge
       - swaybg
+      - hyprsunset
       # Need this, but dep errors; will fix later
       # - hyprland-qtutils
   - type: files
