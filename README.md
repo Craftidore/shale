@@ -2,7 +2,7 @@
 
 # Craftidore's Shale
 
-Shale: A sway-based Fedora distribution for Craftidore's personal use. Named after a rock because Fedora Atomic distributions used to all be named after rocks.
+Shale: A hyprland-based Fedora distribution for Craftidore's personal use. Named after a rock because Fedora Atomic distributions used to all be named after rocks.
 
 Based on wayblueorg/wayblue's hyprland/hyprland-nvidia ever since ublue's sway-nvidia got deprecated.
 
