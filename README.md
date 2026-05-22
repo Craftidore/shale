@@ -61,10 +61,6 @@ rpm-ostree kargs \
     --append-if-missing=nvidia-drm.fbdev=1
 ```
 
-## ISO
-
-If build on Fedora Atomic, you can generate an offline ISO with the instructions available [here](https://blue-build.org/how-to/generate-iso/#_top). These ISOs cannot unfortunately be distributed on GitHub for free due to large sizes, so for public projects something else has to be used for hosting.
-
 ## Verification
 
 (idk if this information is still valid, since I switched to wayblue)
