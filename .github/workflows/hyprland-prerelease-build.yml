@@ -1,8 +1,8 @@
-name: bluebuild
+name: bluebuild-hyprland-prerelease
 on:
   schedule:
     - cron:
-        "00 06 * * 1,4,6" # build at 06:00 UTC every couple day
+        "00 06 * * *" # build at 06:00 UTC every day
         # (1 hour after last wayblue images start building)
   push:
     paths-ignore: # don't rebuild if only documentation has changed
@@ -27,9 +27,7 @@ jobs:
       matrix:
         recipe:
           # !! Add your recipes here
-          - recipe-desktop.yml
-          - recipe-laptop.yml     
-          - recipe-work-desktop.yml
+          - recipe-hyprland-prerelease.yml
     steps:
       # the build is fully handled by the reusable github action
       - name: Build Custom Image
