@@ -1,0 +1,46 @@
+# image will be published to ghcr.io/<user>/<name>
+name: crafti-hyprland-rpm-prerelease-track
+# description will be included in the image's metadata
+description: A utility image for testing the wayblueorg/hyprlandRPM prerelease-branch packages
+
+base-image: ghcr.io/wayblueorg/hyprland
+image-version: 43
+
+# module configuration, executed in order
+# you can include multiple instances of the same module
+modules:
+  - type: signing # this sets up the proper policy & signing files for signed images to work fully
+  - type: dnf
+    repos:
+      copr:
+        - craftidore/hyprland-prerelease-track
+    replace:
+      - from-repo: copr:copr.fedorainfracloud.org:craftidore:hyprland-prerelease-track
+        packages:
+          - hyprutils
+          - hyprlang
+          - hyprgraphics
+          - hyprwire
+          - hyprcursor
+          - hyprtoolkit
+          - hyprpaper
+          - hyprland-guiutils
+          - hyprland-git
+          - hyprlock
+          - xdg-desktop-portal-hyprland
+          - hypridle
+          - aquamarine
+    install:
+      packages:
+        - repo: copr:copr.fedorainfracloud.org:craftidore:hyprland-prerelease-track
+          packages:
+            - hyprland-qt-support
+            - hyprlauncher
+            - hyprpicker
+            - hyprpolkitagent
+            - hyprpwcenter
+            - hyprqt6engine
+            - hyprshutdown
+            - hyprsunset
+            - hyprsysteminfo
+            - hyprwayland-scanner
