@@ -3,10 +3,10 @@ name: crafti-hyprland-rpm-prerelease-track
 # description will be included in the image's metadata
 description: A utility image for testing the wayblueorg/hyprlandRPM prerelease-branch packages
 
-# base-image: ghcr.io/wayblueorg/hyprland
-# image-version: br-next-44
-base-image: quay.io/fedora-ostree-desktops/base-atomic
+base-image: ghcr.io/wayblueorg/hyprland
 image-version: 44
+# base-image: quay.io/fedora-ostree-desktops/base-atomic
+# image-version: 44
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
@@ -15,7 +15,10 @@ modules:
   - type: dnf
     repos:
       copr:
-        - craftidore/hyprland-prerelease-track
+        enable:
+          - craftidore/hyprland-prerelease-track
+        disable:
+          - craftidore/wayblueorg-hyprland
     replace:
       - from-repo: copr:copr.fedorainfracloud.org:craftidore:hyprland-prerelease-track
         packages:
@@ -34,15 +37,12 @@ modules:
           - aquamarine
     install:
       packages:
-        - repo: copr:copr.fedorainfracloud.org:craftidore:hyprland-prerelease-track
-          allow-erasing: true
-          packages:
-            - hyprland-qt-support
-            # - hyprlauncher # Broken dep in blue-build only
-            - hyprpicker
-            # - hyprpolkitagent # Broken dep in blue-build only
-            - hyprpwcenter
-            # - hyprqt6engine # Broken dep in blue-build only
-            - hyprshutdown
-            - hyprsunset
-            - hyprsysteminfo
+        - hyprland-qt-support
+        - hyprlauncher
+        - hyprpicker
+        - hyprpolkitagent
+        - hyprpwcenter
+        - hyprqt6engine
+        - hyprshutdown
+        - hyprsunset
+        - hyprsysteminfo
