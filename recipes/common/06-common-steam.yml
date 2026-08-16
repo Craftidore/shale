@@ -1,4 +1,15 @@
 
-type: script
-scripts:
-  - steamworkaround.sh
+modules:
+  - type: script
+    scripts:
+      - steamworkaround.sh
+  # - type: dnf
+  #   install:
+  #     packages:
+  #       - gamescope
+  #       - mangoapp
+  - type: files
+    files:
+      - source: system/steam-gamescope/bin/
+        destination: /usr/bin/
+
