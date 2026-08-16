@@ -1,8 +1,8 @@
 
 modules:
-  - type: script
-    scripts:
-      - steamworkaround.sh
+  # - type: script
+  #   scripts:
+  #     - steamworkaround.sh
   # - type: dnf
   #   install:
   #     packages:
