@@ -1,16 +1,18 @@
 modules:
-  - type: rpm-ostree
+  - type: dnf
     # remove:
-    #   - xdg-desktop-portal-hyprland
+    #   packages:
+    #     - xdg-desktop-portal-hyprland
     install:
-      # - xdg-desktop-portal-wlr
-      - xwaylandvideobridge
-      - swaybg
-      - hyprsunset
-      - hyprlauncher
-      - hyprpicker
-      - hyprsysteminfo
-      - hyprshutdown
+      packages:
+        # - xdg-desktop-portal-wlr
+        - xwaylandvideobridge
+        - swaybg
+        - hyprsunset
+        - hyprlauncher
+        - hyprpicker
+        - hyprsysteminfo
+        - hyprshutdown
   - type: files
     files:
       - source: system/hyprland/share

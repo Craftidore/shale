@@ -1,49 +1,52 @@
 modules:
-  # - type: rpm-ostree
-  #   install:
-  #     - https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-%OS_VERSION%.noarch.rpm
-  #     - https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-%OS_VERSION%.noarch.rpm
-  - type: rpm-ostree
+  - type: dnf
     repos: 
-      - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
-      - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
-      - https://repository.mullvad.net/rpm/stable/mullvad.repo
-      - https://copr.fedorainfracloud.org/coprs/alternateved/keyd/repo/fedora-%OS_VERSION%/alternateved-keyd-fedora-%OS_VERSION%.repo
-      - https://copr.fedorainfracloud.org/coprs/che/nerd-fonts/repo/fedora-%OS_VERSION%/che-nerd-fonts-fedora-%OS_VERSION%.repo
+      files:
+  #       - https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-%OS_VERSION%.noarch.rpm
+  #       - https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-%OS_VERSION%.noarch.rpm
+        - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
+        - https://repository.mullvad.net/rpm/stable/mullvad.repo
+      copr:
+        - alternateved/keyd
+        - che/nerd-fonts
+        - atim/starship
     install:
-      # terminal quality-of-life
-      - alacritty
-      - micro
-      - vim
-      - starship
-      - wl-clipboard
-      # System
-      - NetworkManager-tui
-      - tailscale
-      - pavucontrol-qt
-      - keyd
-      - gnome-keyring
-      # sway stuff
-      # - sway # artifact of when this was kde-based
-      - slurp # screenshots
-      - flameshot # screenshots, alternative
-      - wofi # rofi clone for menus (No longer used, but might use it in other places)
-      - ulauncher
-      - nerd-fonts
-      # virtualisation
-      - virt-install
-      - qemu-kvm
-      - qemu
-      - libvirt-daemon-config-network
-      - libvirt-daemon-kvm
-      - mate-polkit
-      - virt-manager
-      - virt-viewer
-      - libguestfs-tools
-      - python3-libguestfs
-      - virt-top
-      - samba # file sharing (virtiofs + WinFSP + cl.exe don't like each other)
+      packages:
+        # terminal quality-of-life
+        - alacritty
+        - micro
+        - vim
+        - starship
+        - wl-clipboard
+        # System
+        - NetworkManager-tui
+        - tailscale
+        - pavucontrol-qt
+        - keyd
+        - gnome-keyring
+        # sway stuff
+        # - sway # artifact of when this was kde-based
+        - slurp # screenshots
+        - flameshot # screenshots, alternative
+        - wofi # rofi clone for menus (No longer used, but might use it in other places)
+        - ulauncher
+        - nerd-fonts
+        # virtualisation
+        - virt-install
+        - qemu-kvm
+        - qemu
+        - libvirt-daemon-config-network
+        - libvirt-daemon-kvm
+        - mate-polkit
+        - virt-manager
+        - virt-viewer
+        - libguestfs-tools
+        - python3-libguestfs
+        - virt-top
+        - samba # file sharing (virtiofs + WinFSP + cl.exe don't like each other)
     remove:
-      - firefox # default firefox removed in favor of brave + vivaldi
-      - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
+      auto-remove: true
+      packages:
+        - firefox # default firefox removed in favor of brave + vivaldi
+        - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
 

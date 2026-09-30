@@ -1,9 +1,10 @@
 modules:
-  - type: rpm-ostree
+  - type: dnf
     install:
-      - jq
-      - libnotify # should already be installed
-      - wtype # used by wex-runner
+      packages:
+        - jq
+        - libnotify # should already be installed
+        - wtype # used by wex-runner
   - type: script
     scripts:
       - install-wex.sh
