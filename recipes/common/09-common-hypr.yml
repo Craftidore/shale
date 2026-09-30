@@ -13,6 +13,7 @@ modules:
         - hyprpicker
         - hyprsysteminfo
         - hyprshutdown
+        - hyprpwcenter
   - type: files
     files:
       - source: system/hyprland/share
