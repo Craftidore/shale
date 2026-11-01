@@ -21,7 +21,6 @@ modules:
           - org.mozilla.Thunderbird
           # games
           - com.heroicgameslauncher.hgl
-          - com.valvesoftware.Steam
           # coding
           - com.vscodium.codium
 
